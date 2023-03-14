@@ -25,6 +25,6 @@ As a beauty salon website user, I want to:
 
 
 
-As an admin managing the beauty salon website, I want to:
+As the beauty salon website admin, I want to:
 
 - Be able to accept and decline appointments.
