@@ -1,6 +1,6 @@
 # Beauty-Salon-Web
 
-Team Name: BYT
+Team Name: BYT \
 Team Members:
 - Saleh Yunis: yunissalih.ys@gmail.com
 - Mihai Bogdan Popa: shefuwe1@gmail.com
