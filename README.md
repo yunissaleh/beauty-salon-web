@@ -15,8 +15,6 @@ As a beauty salon website user, I want to:
 
 - View the salon's portfolio to see previous work to help me make a decision.
 
-- Leave feedback or a review after my visit to share my experience with others, also browse myself others feedback and reviews.
-
 - Find the salon's contact information and opening hours quickly and easily.
 
 - Receive email reminders so that I don't forget about my scheduled visits.
