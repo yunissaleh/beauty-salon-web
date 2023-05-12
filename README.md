@@ -8,6 +8,7 @@ Team Members:
 ----------------------------------------------------------------------------------
 
 User Stories: 
+
 As a beauty salon website user, I want to:
 
 - Browse the salon's services so that I may choose the most suitable service for me.
