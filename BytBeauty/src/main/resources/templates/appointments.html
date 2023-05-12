@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Welcome</title>
+    <link rel="stylesheet" th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css}" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh}" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/styles.css}" type="text/css"/>
+    <script th:src="@{/js/script.js}" defer></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+</head>
+<body>
+<!-- Nav -->
+<div class="top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"> <a th:href="@{/}"><img th:src="@{/images/logo.png}" class="logo"  style="width:120px;height:auto; margin: 14px"></a></div>
+            <div class="col-md-7">
+                <ul class="navigation">
+                    <li><a th:href="@{/team}">TEAM</a></li>
+                    <li><a href="">SERVICES</a></li>
+                    <li><a href="">GALLERY</a></li>
+                    <li><a href="">CONTACT</a></li>
+                    <li><a th:href="@{/appointments}">APPOINTMENTS</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Content -->
+    <div class="content">
+        <div class="container">
+                <div th:each="appointment : ${appointments}">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title" th:text="${appointment.fname + ' ' + appointment.lname}"></h5>
+                            <p class="card-text" th:text="${'Email: ' + appointment.email
+                             + ', Phone: ' + appointment.phone +
+                              ', Service: ' + appointment.service + ', Date: ' + appointment.date}"></p>
+                            <div id="btns" th:id="${appointment.id}">
+                            <a href="#" class="btn btn-success" th:onclick="acceptEmailTo([[${appointment.email}]],[[${appointment.id}]])"> Accept</a>
+                            <a href="#" class="btn btn-danger"  th:onclick="rejectEmailTo([[${appointment.email}]],[[${appointment.id}]])">Reject</a>
+                            </div>
+
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+
+
+
+<!-- Footer -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 details" >
+                <p>Bd.Pipera, Nr. 38C. Bucuresti, Ilfov</p>
+                <p>L-V: 9:00 - 21:00  S: 9:00 - 14:30</p>
+                <p> Tel: +407111555999</p></div>
+            <div class="col-md-5"> <img th:src="@{'/images/logo2.png'}" class="logo"  alt="logo" style="width:400px;height:auto; "></div>
+            <div class="col-md-3 newsletter">
+                <h4>JOIN THE LIST</h4>
+                <form>
+                    <input type="text" placeholder="EMAIL ADDRESS" name="" >
+                    <button >SIGN UP TO NEWSLETTER</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

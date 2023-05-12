@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Welcome</title>
+    <link rel="stylesheet" th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css}" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh}" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/styles.css}" type="text/css"/>
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+</head>
+<body>
+<!-- Nav -->
+<div class="top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"> <a th:href="@{/}"><img th:src="@{/images/logo.png}" class="logo"  style="width:120px;height:auto; margin: 14px"></a></div>
+            <div class="col-md-7">
+                <ul class="navigation">
+                    <li><a th:href="@{/team}">TEAM</a></li>
+                    <li><a href="">SERVICES</a></li>
+                    <li><a href="">GALLERY</a></li>
+                    <li><a href="">CONTACT</a></li>
+                    <li><a th:href="@{/appointments}">APPOINTMENTS</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="addAp">
+<div class="content">
+    <div class="container">
+        <!--action is by default POST /appointments/new -->
+        <div class="row">
+        <div class="col-md-3" style="background-color: #DDDCD7"></div>
+            <div class="col-md-1" ></div>
+            <div class="col-md-3 aform">
+            <h6 id="book">BOOK APPOINTMENT</h6>
+                <form th:object="${appointment}" method="post">
+                    <input th:field="*{fname}" placeholder="First Name" class="appoint"><br>
+                    <input th:field="*{lname}" placeholder="Last Name" class="appoint"><br>
+                        <input th:field="*{phone}" placeholder="Phone" class="appoint"><br>
+                        <input th:field="*{email}" placeholder="Email" class="appoint"><br>
+                        <select th:field="*{service}" class="appoint"><br>
+                            <option value="Haircut">Haircut & Styling - 50$</option>
+                        <option value="Manicure">Manicure - 25$</option>
+                        <option value="Pedicure">Pedicure - 25$ </option>
+                        <option value="Pedicure">Facial Treatment - 40$ </option>
+                        <option value="Pedicure">Makeup - 50$</option>
+                    </select><br>
+                        <input type="datetime-local"  id="myDateTimeLocal" th:field="*{date}" placeholder="date" class="appoint"><br>
+
+                        <input type="submit" class="appoint">
+                </form>
+            </div>
+            <div class="col-md-1" ></div>
+
+            <div class="col-md-3"  style="background-color: #DDDCD7"></div>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    var input = document.getElementById('myDateTimeLocal');
+    if (input) {
+        var minTime = '09:00';
+        var maxTime = '17:00';
+
+        input.addEventListener('input', function() {
+            var value = input.value;
+            var time = value.split('T')[1].substring(0, 5); // Extract the time portion
+
+            if (time < minTime) {
+                input.setCustomValidity('Please select a time between 9 am and 5 pm.');
+            } else if (time > maxTime) {
+                input.setCustomValidity('Please select a time between 9 am and 5 pm.');
+            } else {
+                input.setCustomValidity('');
+            }
+        });
+    } else {
+        console.error('Could not find the input element with ID "myDateTimeLocal".');
+    }
+</script>
+<!-- Footer -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 details" >
+                <p>Bd.Pipera, Nr. 38C. Bucuresti, Ilfov</p>
+                <p>L-V: 9:00 - 21:00  S: 9:00 - 14:30</p>
+                <p> Tel: +407111555999</p></div>
+            <div class="col-md-5"> <img th:src="@{'/images/logo2.png'}" class="logo"  alt="logo" style="width:400px;height:auto; "></div>
+            <div class="col-md-3 newsletter">
+                <h4>JOIN THE LIST</h4>
+                <form>
+                    <input type="text" placeholder="EMAIL ADDRESS" name="" >
+                    <button >SIGN UP TO NEWSLETTER</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

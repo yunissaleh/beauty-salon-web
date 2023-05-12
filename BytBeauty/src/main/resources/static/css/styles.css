@@ -1,0 +1,95 @@
+body {
+    font-family: 'Montserrat';
+}
+p, h3,h4{
+    color: #493932;
+}
+.top .container {
+    height: 30px;
+}
+.navigation {
+    list-style: none;
+    text-align: center;
+    padding: 25px;
+}
+.navigation li {
+    display: inline-block;
+    margin: 0 22px;
+}
+
+.navigation a {
+    color: #493932;
+
+    font-size: 18px;
+}
+h1 {
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+.content {
+    margin: 70px;
+}
+.content .text{
+    font-size: 30px;
+    margin: 0 80px;
+}
+.footer {
+    background-color: #DDDCD7;
+}
+.details{
+    margin-top: 70px;
+    font-size: 15px;
+
+}
+
+input .newsletter{
+    width: 100px;
+}
+
+
+input {
+    text-align: center;
+}
+h4 {
+    margin-left: 14px;
+}
+button {
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: #493932;
+    color:#493932;
+    width: 200px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.newsletter {
+    margin-top: 50px;
+}
+
+.mb-4 .shadow img {
+    width: 130px;
+    border-radius: 80px;
+}
+.back {
+    background-color:  #DDDCD7; }
+
+.appoint {
+    width: 200px;
+    height: 30px;
+    margin: 10px;
+}
+.addAp {
+    margin-top: 30px;
+    margin-left: 70px;
+}
+#book {
+    background-color: #DDDCD7;
+    padding: 10px 10px 10px 15px;
+    width: 215px;
+}
+
+.map {
+    margin-top:  70px;
+    margin-bottom: 70px;
+}

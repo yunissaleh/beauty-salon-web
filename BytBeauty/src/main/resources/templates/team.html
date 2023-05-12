@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Welcome</title>
+  <link rel="stylesheet" th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css}" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh}" crossorigin="anonymous">
+  <link rel="stylesheet" th:href="@{/css/styles.css}" type="text/css"/>
+
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+</head>
+<body>
+<!-- Nav -->
+<div class="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3"> <a th:href="@{/}"><img  th:src="@{'images/logo.png'}"  class="logo"  style="width:120px;height:auto; margin: 14px"></a></div>
+      <div class="col-md-7">
+        <ul class="navigation">
+          <li><a th:href="@{/team}">TEAM</a></li>
+          <li><a href="">SERVICES</a></li>
+          <li><a href="">GALLERY</a></li>
+          <li><a href="">CONTACT</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<div class="p-5 text-center bg-image" style="background-image: url('/images/header2.png'); height: 400px; margin-top: 58px;">
+
+  <div class="d-flex justify-content-left align-items-left h-100" style="margin: 75px">
+    <div class="text-white">
+      <h1 class="mb-3" style="background-color: #DDDCD7;padding: 15px;border-radius: 10px;"><strong>MEET OUR TEAM</strong></h1>
+
+    </div>
+  </div>
+</div>
+
+<!-- Content -->
+<div class="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="back profile-card shadow mb-4 text-center rounded-lg p-4 position-relative h-100">
+          <div class="profile-card_image">
+            <img th:src="@{'images/team1.png'}" alt="User" class="mb-4 shadow">
+          </div>
+          <div class="profile-card_details">
+            <h3 class="mb-0">John</h3>
+            <p class="text-muted">Hairstylist</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="back profile-card shadow mb-4 text-center rounded-lg p-4 position-relative h-100">
+          <div class="profile-card_image">
+            <img  th:src="@{'images/team2.png'}"  alt="User" class="mb-4 shadow">
+          </div>
+          <div class="profile-card_details">
+            <h3 class="mb-0">Natalie</h3>
+            <p class="text-muted">Makeup Artist</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="back profile-card shadow mb-4 text-center rounded-lg p-4 position-relative h-100">
+          <div class="profile-card_image">
+            <img th:src="@{'images/team3.png'}"  alt="User" class="mb-4 shadow">
+          </div>
+          <div class="profile-card_details">
+            <h3 class="mb-0">Ruby</h3>
+            <p class="text-muted">Esthetician</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="back profile-card shadow mb-4 text-center rounded-lg p-4 position-relative h-100">
+          <div class="profile-card_image">
+            <img th:src="@{'images/team4.png'}"  alt="User" class="mb-4 shadow">
+          </div>
+          <div class="profile-card_details">
+            <h3 class="mb-0">Naomi</h3>
+            <p class="text-muted">Hairstylist</p>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="back profile-card shadow mb-4 text-center rounded-lg p-4 position-relative h-100">
+          <div class="profile-card_image">
+            <img th:src="@{'images/team5.png'}"  alt="User" class="mb-4 shadow">
+          </div>
+          <div class="profile-card_details">
+            <h3 class="mb-0">Robert</h3>
+            <p class="text-muted">Nail Technician</p>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="back profile-card shadow mb-4 text-center rounded-lg p-4 position-relative h-100">
+          <div class="profile-card_image">
+            <img th:src="@{'images/team6.png'}"  alt="User" class="mb-4 shadow">
+          </div>
+          <div class="profile-card_details">
+            <h3 class="mb-0">Mia</h3>
+            <p class="text-muted">Hairstylist</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 details" >
+        <p>Bd.Pipera, Nr. 38C. Bucuresti, Ilfov</p>
+        <p>L-V: 9:00 - 21:00  S: 9:00 - 14:30</p>
+        <p> Tel: +407111555999</p></div>
+      <div class="col-md-5"> <img  th:src="@{'images/logo2.png'}"  class="logo"  style="width:400px;height:auto; "></div>
+      <div class="col-md-3 newsletter">
+        <h4>JOIN THE LIST</h4>
+        <form>
+          <input type="text" placeholder="EMAIL ADDRESS" name="" >
+          <button >SIGN UP TO NEWSLETTER</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
