@@ -7,6 +7,7 @@ Team Members:
 - Teodora-Johanne Nedelcu: teo.johanne@yahoo.com
 ----------------------------------------------------------------------------------
 
+User Stories: 
 As a beauty salon website user, I want to:
 
 - Browse the salon's services so that I may choose the most suitable service for me.
@@ -14,8 +15,6 @@ As a beauty salon website user, I want to:
 - Book appointments online so that I can visit at my convenience.
 
 - View the salon's portfolio to see previous work to help me make a decision.
-
-- Leave feedback or a review after my visit to share my experience with others, also browse myself others feedback and reviews.
 
 - Find the salon's contact information and opening hours quickly and easily.
 
