@@ -29,4 +29,11 @@ public class HomeController {
         return "contact";
 
     }
+
+    @GetMapping("/services")
+    public String services(){
+        //returns the view
+        return "services";
+
+    }
 }
