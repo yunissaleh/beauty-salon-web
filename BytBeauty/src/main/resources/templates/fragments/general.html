@@ -1,0 +1,37 @@
+<div class="top" th:fragment="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3"> <a th:href="@{/}"><img th:src="@{/images/logo.png}" class="logo"  style="width:120px;height:auto; margin: 14px"></a></div>
+      <div class="col-md-7">
+        <ul class="navigation">
+          <li><a th:href="@{/team}">TEAM</a></li>
+          <li><a th:href="@{/services}">SERVICES</a></li>
+          <li><a th:href="@{/appointments/new}">BOOKING</a></li>
+          <li><a th:href="@{/contact}">CONTACT</a></li>
+          <li><a th:href="@{/appointments}">APPOINTMENTS</a></li>
+
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="footer" th:fragment="bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 details" >
+        <p>Bd.Pipera, Nr. 38C. Bucuresti, Ilfov</p>
+        <p>L-V: 9:00 - 21:00  S: 9:00 - 14:30</p>
+        <p> Tel: +407111555999</p></div>
+      <div class="col-md-5"> <img th:src="@{/images/logo2.png}" class="logo"  style="width:400px;height:auto; "></div>
+      <div class="col-md-3 newsletter">
+        <h4>JOIN THE LIST</h4>
+        <form>
+          <input type="text" placeholder="EMAIL ADDRESS" name="" >
+          <button >SIGN UP TO NEWSLETTER</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

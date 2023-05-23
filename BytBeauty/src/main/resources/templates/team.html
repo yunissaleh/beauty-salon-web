@@ -10,22 +10,8 @@
 </head>
 <body>
 <!-- Nav -->
-<div class="top">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3"> <a th:href="@{/}"><img  th:src="@{'images/logo.png'}"  class="logo"  style="width:120px;height:auto; margin: 14px"></a></div>
-      <div class="col-md-7">
-        <ul class="navigation">
-          <li><a th:href="@{/team}">TEAM</a></li>
-          <li><a href="">SERVICES</a></li>
-          <li><a href="">GALLERY</a></li>
-          <li><a href="">CONTACT</a></li>
-        </ul>
-      </div>
+<div th:replace="fragments/general :: top"/>
 
-    </div>
-  </div>
-</div>
 
 <!-- Header -->
 <div class="p-5 text-center bg-image" style="background-image: url('/images/header2.png'); height: 400px; margin-top: 58px;">
@@ -119,24 +105,8 @@
 </div>
 
 <!-- Footer -->
-<div class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 details" >
-        <p>Bd.Pipera, Nr. 38C. Bucuresti, Ilfov</p>
-        <p>L-V: 9:00 - 21:00  S: 9:00 - 14:30</p>
-        <p> Tel: +407111555999</p></div>
-      <div class="col-md-5"> <img  th:src="@{'images/logo2.png'}"  class="logo"  style="width:400px;height:auto; "></div>
-      <div class="col-md-3 newsletter">
-        <h4>JOIN THE LIST</h4>
-        <form>
-          <input type="text" placeholder="EMAIL ADDRESS" name="" >
-          <button >SIGN UP TO NEWSLETTER</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
+<div th:replace="fragments/general :: bottom"/>
+
 
 
 </body>
