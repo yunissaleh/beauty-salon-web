@@ -1,7 +1,10 @@
 package com.wad.firstmvc.controllers;
 
 
+import com.wad.firstmvc.domain.User;
 import com.wad.firstmvc.services.AppointmentService;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.Random;
 
 @Controller
+@Slf4j
 @RequestMapping("/appointments")
 public class AppointmentController {
     private final AppointmentService appointmentService;
@@ -23,8 +27,10 @@ public class AppointmentController {
     //-populate the model with the retrieved products!
     //-select the appropriate view (navigation)
     @GetMapping
-    public String viewProducts(Model model){
+    public String viewProducts(Model model, Authentication authentication){
         model.addAttribute("appointments",appointmentService.findAll());
+        User user = (User) authentication.getPrincipal();
+        log.info(user.getUsername());
         return "appointments";
     }
 
@@ -39,7 +45,7 @@ public class AppointmentController {
         if(appointment.getId()==null)
             appointment.setId(new Random().nextLong());
         appointmentService.save(appointment);
-        return "redirect:/appointments";
+        return "redirect:/";
     }
 
 }
