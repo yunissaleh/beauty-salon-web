@@ -29,11 +29,14 @@ public class SecurityConfig {
                 .authorizeRequests((authorizeRequests) ->
                         authorizeRequests
                                 .requestMatchers(HttpMethod.POST, "/appointments/new").hasAnyRole("USER")
-                                .requestMatchers(HttpMethod.GET, "/appointments/**").hasAnyRole("ADMIN")
+                                .requestMatchers(HttpMethod.GET, "/appointments/**").hasAnyRole("ADMIN","USER")
                                 .requestMatchers("/", "/css/**", "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css").permitAll()
                 )
                 .formLogin(withDefaults())
                 .httpBasic()
+                .and()
+                .logout()
+                .logoutSuccessUrl("/")
                 .and()
                 .csrf().disable();
 
