@@ -28,4 +28,9 @@ public class Appointment {
     private String date;
 
 
+    private Boolean isAccepted;
+    private Boolean displayOptions;
+
+
+
 }

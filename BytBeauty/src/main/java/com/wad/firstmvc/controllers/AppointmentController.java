@@ -1,6 +1,7 @@
 package com.wad.firstmvc.controllers;
 
 
+import com.wad.firstmvc.domain.Appointment;
 import com.wad.firstmvc.domain.User;
 import com.wad.firstmvc.services.AppointmentService;
 import lombok.extern.slf4j.Slf4j;
@@ -36,14 +37,16 @@ public class AppointmentController {
 
     @GetMapping("/new")
     public String showAddProductForm(Model model){
-        model.addAttribute("appointment",new com.wad.firstmvc.domain.Appointment());
+        model.addAttribute("appointment",new Appointment());
         return "addappointments";
     }
 
     @PostMapping("/new")
-    public String addProduct(com.wad.firstmvc.domain.Appointment appointment){
+    public String addProduct(Appointment appointment){
         if(appointment.getId()==null)
             appointment.setId(new Random().nextLong());
+        appointment.setIsAccepted(false);
+        appointment.setDisplayOptions(true);
         appointmentService.save(appointment);
         return "redirect:/";
     }

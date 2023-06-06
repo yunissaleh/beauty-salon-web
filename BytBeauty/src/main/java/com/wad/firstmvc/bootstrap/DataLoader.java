@@ -17,9 +17,9 @@ public class DataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         PasswordEncoder bcrypt = new BCryptPasswordEncoder();
-        User user1=new User("user1",bcrypt.encode("user1"));
+        User user1=new User("user",bcrypt.encode("user"));
         user1.getRoles().add(Role.ROLE_USER);
-        User user2=new User("user2",bcrypt.encode("user2"));
+        User user2=new User("admin",bcrypt.encode("admin"));
         user2.getRoles().add(Role.ROLE_ADMIN);
         userRepository.save(user1);
         userRepository.save(user2);

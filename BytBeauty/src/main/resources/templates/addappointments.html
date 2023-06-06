@@ -26,7 +26,7 @@
                 <form th:object="${appointment}" method="post">
                     <input th:field="*{fname}" placeholder="First Name" class="appoint"><br>
                     <input th:field="*{lname}" placeholder="Last Name" class="appoint"><br>
-                        <input th:field="*{phone}" placeholder="Phone" class="appoint"><br>
+                        <input th:field="*{phone}" placeholder="Phone" class="appoint" type="number"><br>
                         <input th:field="*{email}" placeholder="Email" class="appoint"><br>
                         <select th:field="*{service}" class="appoint"><br>
                             <option value="Haircut">Haircut & Styling - 50$</option>

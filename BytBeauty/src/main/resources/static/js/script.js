@@ -8,7 +8,7 @@
     to_email: appointmentEmail,
     subject: "Appointment Accepted",
     message: "Your appointment has been accepted."
-};
+    };
 
     // Send the email
     emailjs.send("service_uwfw8pg", "template_zffasod", params)
@@ -17,7 +17,16 @@
     hideButtons(id)
     }, function(error) {
         alert("Email sending failed:" + error)
-    });
+
+    }
+
+
+    );
+
+    //mark as accepted
+        fetch(`/api/${id}`)
+
+
     }
 
     function rejectEmailTo(appointmentEmail,id) {
