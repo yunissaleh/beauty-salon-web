@@ -1,12 +1,3 @@
-# Beauty-Salon-Web
-
-Team Name: BYT \
-Team Members:
-- Saleh Yunis: yunissalih.ys@gmail.com
-- Mihai Bogdan Popa: shefuwe1@gmail.com
-- Teodora-Johanne Nedelcu: teo.johanne@yahoo.com
-----------------------------------------------------------------------------------
-
 User Stories: 
 
 As a beauty salon website user, I want to:
@@ -19,10 +10,7 @@ As a beauty salon website user, I want to:
 
 - Find the salon's contact information and opening hours quickly and easily.
 
-- Receive email reminders so that I don't forget about my scheduled visits.
-
 - Subscribe to a newsletter to receive exclusive offers and promotions.
-
 
 
 As the beauty salon website admin, I want to:
